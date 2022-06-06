@@ -32,7 +32,7 @@ pipeline {
                  
              
                
-               sh "sudo ansible-playbook main.yml -i inventories/dev/hosts --user cloud_user --key-file /home/cloud_user/ansible_aut.pem -e '@configs/dev.yml' --ask-become-pass"
+               sh "ansible-playbook main.yml -i inventories/dev/hosts --user jenkins --key-file ~/.ssh/id_rsa -e '@configs/dev.yml'"
 
                
             
